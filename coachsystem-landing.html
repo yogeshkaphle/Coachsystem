@@ -1,8 +1,4 @@
----
-import '../styles/global.css';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,7 +6,6 @@ import '../styles/global.css';
 <title>You have the audience. Where are the clients? | Yogesh Kaphle</title>
 <meta name="description" content="You built the audience. But the paying clients aren't coming. Get a free read on the one thing leaking your clients, from the operator who turns viewers into paying clients.">
 <link rel="canonical" href="https://system.yogeshkaphle.com/">
-<link rel="icon" href="/favicon.ico">
 <!-- Open Graph / link preview (LinkedIn, WhatsApp, Meta) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://system.yogeshkaphle.com/">
@@ -21,7 +16,6 @@ import '../styles/global.css';
 <meta name="twitter:title" content="You have the audience. Where are the clients?">
 <meta name="twitter:description" content="A free read on the one thing leaking your clients. For coaches with an audience and an offer.">
 <meta name="twitter:image" content="https://system.yogeshkaphle.com/og-cover.png">
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
 
@@ -229,7 +223,7 @@ import '../styles/global.css';
   .offer-list li{display:flex;gap:14px;align-items:flex-start;color:var(--white);font-size:1.05rem;font-weight:500}
   .offer-list li::before{content:'';flex:0 0 8px;width:8px;height:8px;margin-top:9px;background:var(--gold);border-radius:1px}
 
-  /* ---------- CAPTURE ---------- */
+  /* ---------- FORM ---------- */
   .capture{padding:90px 0 110px;border-top:1px solid var(--line)}
   .capture-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   @media(max-width:760px){.capture-grid{grid-template-columns:1fr;gap:36px}}
@@ -244,6 +238,17 @@ import '../styles/global.css';
   }
   .form-lead{font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;color:var(--white);font-size:1.3rem;line-height:1.1;margin-bottom:24px}
   .form-card .btn-primary{width:100%;justify-content:center;font-size:1.1rem}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);margin-bottom:8px}
+  .field label .req{color:var(--gold)}
+  .field label .opt{color:var(--cream-dim);font-weight:500;letter-spacing:.04em;text-transform:none;font-size:.78rem}
+  .field input{
+    width:100%;padding:14px 16px;background:var(--dark);border:1px solid var(--line);
+    border-radius:2px;color:var(--white);font-family:'Manrope';font-size:1rem;transition:border-color .2s;
+  }
+  .field input:focus{outline:none;border-color:var(--gold)}
+  .field input::placeholder{color:var(--cream-dim)}
+  .form-card .btn-primary{width:100%;justify-content:center;font-size:1.1rem;margin-top:6px}
   .form-note{font-size:.82rem;color:var(--cream-dim);margin-top:16px;text-align:center;line-height:1.5}
 
   /* ---------- FOOTER ---------- */
@@ -253,7 +258,6 @@ import '../styles/global.css';
   footer .name{font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);font-size:1.2rem;margin-bottom:2px;text-align:left}
   footer .role{font-size:.88rem;color:var(--cream-dim);letter-spacing:.04em;text-align:left}
   footer .role .gold{color:var(--gold)}
-  .footer-copy{font-size:.75rem;color:var(--cream-dim);text-align:center;margin-top:20px;opacity:.5}
 
   @media(max-width:540px){
     .leak-item{grid-template-columns:48px 1fr;gap:16px;padding:24px 20px}
@@ -261,7 +265,7 @@ import '../styles/global.css';
     .cta-row{flex-direction:column;align-items:stretch}
     .btn{justify-content:center}
   }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
   /* ---------- STICKY MOBILE CTA ---------- */
   .sticky-cta{
@@ -274,9 +278,6 @@ import '../styles/global.css';
   .sticky-cta.show{transform:translateY(0);pointer-events:auto}
   .sticky-cta .btn{width:100%;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.45)}
   @media(min-width:761px){.sticky-cta{display:none}}
-
-  /* focus */
-  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -408,7 +409,7 @@ import '../styles/global.css';
     <div class="wrap">
       <div class="story-grid">
         <div class="story-photo">
-          <img src="/my-photo.png" alt="Yogesh Kaphle, founder of Coach System Nepal" loading="lazy">
+          <img src="my-photo.png" alt="Yogesh Kaphle, founder of Coach System Nepal" loading="lazy">
         </div>
         <div class="story-inner">
           <span class="eyebrow">How I know this works</span>
@@ -464,16 +465,14 @@ import '../styles/global.css';
   <footer>
     <div class="wrap">
       <div class="footer-lockup">
-        <img src="/chevron-cream.png" alt="Coach System Nepal" class="footer-mark">
+        <img src="chevron-cream.png" alt="Coach System Nepal" class="footer-mark">
         <div>
           <div class="name">Yogesh Kaphle</div>
           <div class="role">Founder, <span class="gold">Coach System Nepal</span></div>
         </div>
       </div>
-      <p class="footer-copy">© 2026 Yogesh Kaphle · system.yogeshkaphle.com</p>
     </div>
   </footer>
-
   <!-- STICKY MOBILE CTA (mobile only, shows mid-page) -->
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
     <a href="https://wa.me/85362830217?text=Hi%20Yogesh.%20My%20viewers%20are%20not%20turning%20into%20clients.%20Can%20you%20show%20me%20what%27s%20leaking%20in%20my%20setup%3F" class="btn btn-primary" target="_blank" rel="noopener">Let's find what's stopping the sales →</a>
@@ -482,6 +481,9 @@ import '../styles/global.css';
 </main>
 
 <script>
+  // WhatsApp CTAs open directly. No form backend at this stage —
+  // capture happens in the WhatsApp thread. Smooth-scroll handled by CSS.
+
   // ---- Sticky mobile CTA: show only mid-page ----
   // Hidden while the hero CTA is on screen, and hidden once the footer card scrolls in,
   // so there are never two identical buttons visible at once.
