@@ -1,0 +1,762 @@
+---
+import '../styles/global.css';
+
+const WA_URL =
+  "https://wa.me/85362830217?text=Hi%20Yogesh.%20My%20viewers%20are%20not%20turning%20into%20clients.%20Can%20you%20show%20me%20what%27s%20leaking%20in%20my%20setup%3F";
+const CTA_TEXT = "Let's find what's stopping the sales →";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coach System Nepal — Yogesh Kaphle | Turn Viewers Into Paying Clients</title>
+    <meta
+      name="description"
+      content="You have the audience. You have the offer. So why aren't the clients coming? Yogesh Kaphle shows coaches & creators how to plug the exact leaks in their sales system — without funnels, ads, or tech overwhelm."
+    />
+    <link rel="canonical" href="https://system.yogeshkaphle.com/" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://system.yogeshkaphle.com/" />
+    <meta property="og:title" content="Coach System Nepal — Turn Viewers Into Paying Clients" />
+    <meta
+      property="og:description"
+      content="You have the audience. You have the offer. So why aren't the clients coming? Find the leak in your setup — talk to Yogesh Kaphle."
+    />
+    <meta property="og:image" content="https://system.yogeshkaphle.com/og-cover.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Coach System Nepal — Turn Viewers Into Paying Clients" />
+    <meta
+      name="twitter:description"
+      content="You have the audience. You have the offer. So why aren't the clients coming? Find the leak in your setup."
+    />
+    <meta name="twitter:image" content="https://system.yogeshkaphle.com/og-cover.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #1a1a18;
+        --cream: #f5f0e8;
+        --gold: #c8973a;
+        --gold-light: #e0b96a;
+        --forest: #2d4a3e;
+        --forest-dark: #1e3329;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; animation: none !important; }
+      }
+
+      body {
+        background: var(--ink);
+        color: var(--cream);
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Saira Condensed', sans-serif;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      /* ── CTA Button ── */
+      .cta-btn {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--ink);
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.15s;
+        white-space: nowrap;
+      }
+      .cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+      .section-wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+      /* ── HERO ── */
+      #hero {
+        background: var(--forest-dark);
+        padding: 6rem 0 5rem;
+        text-align: center;
+      }
+      .hero-eyebrow {
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+      }
+      #hero h1 {
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        font-weight: 800;
+        color: var(--cream);
+        max-width: 820px;
+        margin: 0 auto 1.25rem;
+        text-transform: uppercase;
+      }
+      .hero-sub {
+        font-size: 1.125rem;
+        color: #c5bfb3;
+        max-width: 560px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.7;
+      }
+      .hero-proof {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        color: #6a6a5e;
+        font-weight: 500;
+      }
+
+      /* ── PROBLEM ── */
+      #problem { background: var(--ink); padding: 5rem 0; }
+      #problem h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 1rem;
+        max-width: 700px;
+      }
+      .problem-intro {
+        font-size: 1.05rem;
+        color: #b0aa9f;
+        max-width: 580px;
+        margin-bottom: 3rem;
+        line-height: 1.75;
+      }
+      .symptoms {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+      .symptom-card {
+        background: #242420;
+        border: 1px solid #2e2e2a;
+        border-left: 3px solid var(--gold);
+        padding: 1.25rem 1.5rem;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        color: #c5bfb3;
+        font-weight: 500;
+        line-height: 1.5;
+        font-style: italic;
+      }
+
+      /* ── FUNNEL ── */
+      #funnel { background: var(--forest-dark); padding: 5rem 0; }
+      #funnel h2 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+      }
+      .funnel-intro {
+        color: #a8b5a0;
+        font-size: 1rem;
+        max-width: 540px;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+      }
+      .funnel-stages { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+      .stage {
+        position: relative;
+        background: var(--forest);
+        border: 1px solid #3a5a4e;
+        padding: 1.5rem 2rem;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+      }
+      .stage::after {
+        content: "▼";
+        position: absolute;
+        bottom: -1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--gold);
+        font-size: 0.75rem;
+      }
+      .stage:last-child::after { display: none; }
+      .stage:last-child { margin-bottom: 0; }
+      .stage:nth-child(2) { margin-left: 5%; margin-right: 5%; }
+      .stage:nth-child(3) { margin-left: 10%; margin-right: 10%; }
+      .stage:nth-child(4) { margin-left: 15%; margin-right: 15%; }
+      .stage:nth-child(5) { margin-left: 20%; margin-right: 20%; }
+      .stage-label {
+        font-family: 'Saira Condensed', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--cream);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.4rem;
+      }
+      .stage-desc { font-size: 0.875rem; color: #8fb5a0; line-height: 1.5; margin-bottom: 0.75rem; }
+      .leak-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .leak-tag {
+        background: rgba(200,151,58,0.12);
+        border: 1px solid rgba(200,151,58,0.35);
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 2px;
+        font-family: 'Manrope', sans-serif;
+        letter-spacing: 0.03em;
+      }
+
+      /* ── STORY ── */
+      #story { background: var(--ink); padding: 5rem 0; }
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .story-photo-bg {
+        background: var(--forest);
+        border-radius: 6px;
+        overflow: hidden;
+        aspect-ratio: 3/4;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      .story-photo-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+      #story h2 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 1.25rem;
+      }
+      .story-tag {
+        display: inline-block;
+        background: var(--forest);
+        color: #8fb5a0;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.35rem 0.8rem;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
+        margin-bottom: 1.25rem;
+      }
+      .story-text p {
+        font-size: 1rem;
+        color: #b0aa9f;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+      .story-text p strong { color: var(--cream); font-weight: 600; }
+
+      /* ── OFFER ── */
+      #offer { background: var(--forest-dark); padding: 5rem 0; }
+      #offer h2 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+      }
+      .offer-intro {
+        color: #a8b5a0;
+        font-size: 1rem;
+        max-width: 540px;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+      }
+      .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.25rem;
+      }
+      .offer-card {
+        background: var(--forest);
+        border: 1px solid #3a5a4e;
+        padding: 1.5rem;
+        border-radius: 4px;
+      }
+      .offer-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+      .offer-card h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .offer-card p { font-size: 0.875rem; color: #8fb5a0; line-height: 1.6; }
+
+      /* ── PROOF ── */
+      #proof { background: var(--ink); padding: 5rem 0; }
+      #proof h2 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 3rem;
+      }
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+      .testimonial {
+        background: #242420;
+        border: 1px solid #2e2e2a;
+        padding: 1.75rem;
+        border-radius: 4px;
+      }
+      .testimonial-quote { font-size: 2rem; color: var(--gold); line-height: 1; margin-bottom: 0.75rem; }
+      .testimonial p {
+        font-size: 0.95rem;
+        color: #c5bfb3;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+        font-style: italic;
+      }
+      .testimonial-author { font-size: 0.8rem; font-weight: 700; color: var(--cream); text-transform: uppercase; letter-spacing: 0.06em; }
+      .testimonial-role { font-size: 0.75rem; color: #6a6a5e; font-weight: 500; margin-top: 0.15rem; }
+
+      /* ── FOR WHO ── */
+      #for-who { background: var(--forest-dark); padding: 5rem 0; }
+      #for-who h2 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 3rem;
+      }
+      .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .fit-col h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid;
+      }
+      .fit-yes h3 { color: #6dbf8a; border-color: #6dbf8a; }
+      .fit-no h3 { color: #bf6d6d; border-color: #bf6d6d; }
+      .fit-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+      .fit-list li {
+        font-size: 0.9rem;
+        color: #b0aa9f;
+        line-height: 1.5;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .fit-yes .fit-list li::before { content: "✓"; position: absolute; left: 0; color: #6dbf8a; font-weight: 700; }
+      .fit-no .fit-list li::before { content: "✗"; position: absolute; left: 0; color: #bf6d6d; font-weight: 700; }
+
+      /* ── FOOTER CTA ── */
+      #footer-cta { background: var(--ink); padding: 5rem 0 2rem; }
+      .footer-card {
+        background: var(--forest-dark);
+        border: 1px solid #3a5a4e;
+        border-radius: 8px;
+        padding: 3.5rem;
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 4rem;
+      }
+      .footer-card h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cream);
+        margin-bottom: 1rem;
+      }
+      .footer-card p { font-size: 1rem; color: #a8b5a0; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+      .footer-fine { font-size: 0.8rem; color: #4a4a44; margin-top: 1.25rem; }
+
+      footer { border-top: 1px solid #2a2a26; padding: 2rem 0; text-align: center; }
+      .footer-mark { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+      .footer-mark img { width: 28px; opacity: 0.6; }
+      .footer-brand {
+        font-family: 'Saira Condensed', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #6a6a5e;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .footer-copy { font-size: 0.75rem; color: #4a4a44; }
+
+      /* ── STICKY MOBILE CTA ── */
+      #sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--forest-dark);
+        border-top: 1px solid #3a5a4e;
+        padding: 0.875rem 1.5rem;
+        z-index: 100;
+        display: none;
+        text-align: center;
+      }
+      #sticky-cta .cta-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0.875rem 1.25rem;
+      }
+
+      @media (max-width: 760px) {
+        .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        .story-photo-wrap { max-width: 280px; margin: 0 auto; }
+        .funnel-stages .stage:nth-child(n) { margin-left: 0 !important; margin-right: 0 !important; }
+        .for-who-grid { grid-template-columns: 1fr; }
+        .footer-card { padding: 2rem 1.5rem; }
+        #footer-cta { padding-bottom: 6rem; }
+      }
+      @media (min-width: 761px) {
+        #sticky-cta { display: none !important; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="section-wrap">
+        <p class="hero-eyebrow">Coach System Nepal · Yogesh Kaphle</p>
+        <h1>Your Viewers Aren't Turning Into Clients</h1>
+        <p class="hero-sub">
+          You have the content. You have the audience. You even have an offer.
+          So why is the money not following? There's a leak — and most coaches never find it.
+        </p>
+        <a href={WA_URL} target="_blank" rel="noopener noreferrer" class="cta-btn">
+          {CTA_TEXT}
+        </a>
+        <p class="hero-proof">Free 30-min WhatsApp call · No pitch decks · Just the diagnosis</p>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem">
+      <div class="section-wrap">
+        <h2>You're Doing Everything Right — And Still Stuck</h2>
+        <p class="problem-intro">
+          More content. Better thumbnails. A new landing page. Yet at the end of the month,
+          your client roster looks exactly the same. Here's what that actually sounds like:
+        </p>
+        <div class="symptoms">
+          <div class="symptom-card">"My videos get views but nobody DMs me about working together."</div>
+          <div class="symptom-card">"I got on calls last month — none of them converted. I don't know why."</div>
+          <div class="symptom-card">"People say they love my content but buy from someone else."</div>
+          <div class="symptom-card">"I lowered my price and still didn't close. Now I don't know what to charge."</div>
+          <div class="symptom-card">"I feel like I'm one funnel away — but every funnel feels like starting over."</div>
+          <div class="symptom-card">"I have 5,000 followers. I should be making more than this."</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNNEL / LEAKS -->
+    <section id="funnel">
+      <div class="section-wrap">
+        <h2>Where the Revenue Is Leaking</h2>
+        <p class="funnel-intro">
+          Every coaching business has the same five stages. Most are leaking at one of them —
+          usually not the one they think.
+        </p>
+        <div class="funnel-stages">
+          <div class="stage">
+            <div class="stage-label">1 — Attention</div>
+            <div class="stage-desc">People see your content — or they don't.</div>
+            <div class="leak-tags">
+              <span class="leak-tag">Wrong platform</span>
+              <span class="leak-tag">No hook</span>
+              <span class="leak-tag">Zero search intent</span>
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-label">2 — Interest</div>
+            <div class="stage-desc">Viewers decide in 8 seconds if you're worth following.</div>
+            <div class="leak-tags">
+              <span class="leak-tag">No clear niche signal</span>
+              <span class="leak-tag">Generic content</span>
+              <span class="leak-tag">Weak bio / CTA</span>
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-label">3 — Trust</div>
+            <div class="stage-desc">They need to believe you get their problem before they'll pay.</div>
+            <div class="leak-tags">
+              <span class="leak-tag">No transformation proof</span>
+              <span class="leak-tag">Too salesy too soon</span>
+              <span class="leak-tag">Missing authority signals</span>
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-label">4 — Offer</div>
+            <div class="stage-desc">The right offer at the right price — or the deal dies here.</div>
+            <div class="leak-tags">
+              <span class="leak-tag">Unclear outcome</span>
+              <span class="leak-tag">Mispriced</span>
+              <span class="leak-tag">No urgency</span>
+              <span class="leak-tag">Wrong format</span>
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-label">5 — Close</div>
+            <div class="stage-desc">The conversation that should convert — but doesn't.</div>
+            <div class="leak-tags">
+              <span class="leak-tag">No call framework</span>
+              <span class="leak-tag">Weak follow-up</span>
+              <span class="leak-tag">Objection blindspots</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story">
+      <div class="section-wrap">
+        <div class="story-grid">
+          <div class="story-photo-wrap">
+            <div class="story-photo-bg">
+              <img
+                src="/my-photo.png"
+                alt="Yogesh Kaphle, founder of Coach System Nepal, arms crossed"
+                width="480"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <div class="story-text">
+            <span class="story-tag">Yogesh Kaphle · Founder</span>
+            <h2>I Built This After Watching Great Coaches Go Broke</h2>
+            <p>
+              I spent years inside the content + coaching world — watching people who were
+              <strong>genuinely skilled</strong> get outearned by people who were simply
+              better-wired for sales.
+            </p>
+            <p>
+              The difference wasn't talent. It wasn't even audience size. It was
+              <strong>system clarity</strong> — knowing exactly where viewers were dropping off
+              and what to do about it.
+            </p>
+            <p>
+              Coach System Nepal exists because that gap is fixable. Not with a new course,
+              not with a new platform — with a clear-eyed audit of what you already have,
+              and a targeted patch on the one stage that's actually leaking.
+            </p>
+            <p>
+              I'll find it with you in one conversation. No fluff. No 90-day program pitch.
+              Just the answer — and what to do next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section id="offer">
+      <div class="section-wrap">
+        <h2>What Happens On the Call</h2>
+        <p class="offer-intro">
+          One focused WhatsApp call. You walk me through your setup —
+          I show you where the money is leaking and exactly what to fix first.
+        </p>
+        <div class="offer-grid">
+          <div class="offer-card">
+            <div class="offer-icon">🔍</div>
+            <h3>Full-Funnel Audit</h3>
+            <p>We map your five stages — content, interest, trust, offer, close — and find the bottleneck.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">📍</div>
+            <h3>Single Leak, Diagnosed</h3>
+            <p>I'll name the one stage costing you the most right now. Not five things. One thing.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">🛠</div>
+            <h3>Actionable Fix</h3>
+            <p>You leave with a specific change to make this week — not a strategy deck, not homework.</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">💬</div>
+            <h3>Zero Pitch</h3>
+            <p>This isn't a discovery call in disguise. You'll get real value whether we work together or not.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section id="proof">
+      <div class="section-wrap">
+        <h2>What Coaches Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p>
+              I had 3,000 Instagram followers and zero paying clients. After one call with Yogesh
+              I realised my offer was invisible — nobody could tell what they'd actually get.
+              Two weeks later I closed my first ₹30k client from a single story.
+            </p>
+            <div class="testimonial-author">Priya S.</div>
+            <div class="testimonial-role">Nutrition Coach, Pune</div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p>
+              I thought my problem was traffic. Yogesh showed me in 20 minutes that I was getting
+              plenty of traffic — I just had no trust-building bridge. Fixed the follow-up sequence
+              and booked four clients that month.
+            </p>
+            <div class="testimonial-author">Rohan T.</div>
+            <div class="testimonial-role">Fitness Coach, Kathmandu</div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p>
+              Most business coaches talk in theory. Yogesh looked at my actual DMs,
+              my actual landing page, my actual call recordings. The diagnosis was uncomfortably
+              accurate. The fix was simpler than I expected.
+            </p>
+            <div class="testimonial-author">Anita K.</div>
+            <div class="testimonial-role">Mindset Coach, Delhi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHO -->
+    <section id="for-who">
+      <div class="section-wrap">
+        <h2>Is This For You?</h2>
+        <div class="for-who-grid">
+          <div class="fit-col fit-yes">
+            <h3>Good Fit</h3>
+            <ul class="fit-list">
+              <li>You're already creating content and have some audience</li>
+              <li>You have an offer (even if it's not selling)</li>
+              <li>You're ready to look honestly at what's not working</li>
+              <li>You want clarity, not another framework to learn</li>
+              <li>You're a coach, consultant, or course creator</li>
+            </ul>
+          </div>
+          <div class="fit-col fit-no">
+            <h3>Not a Fit</h3>
+            <ul class="fit-list">
+              <li>You haven't started creating content yet</li>
+              <li>You're looking for a done-for-you agency</li>
+              <li>You want a guaranteed result without doing the work</li>
+              <li>You need ads management or SEO services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER CTA CARD -->
+    <section id="footer-cta">
+      <div class="section-wrap">
+        <div class="footer-card">
+          <h2>Find the Leak. Fix It. Grow.</h2>
+          <p>
+            One honest conversation is all it takes to know which stage is costing you clients.
+            Book a free 30-min call on WhatsApp — no pitch, no pressure.
+          </p>
+          <a href={WA_URL} target="_blank" rel="noopener noreferrer" class="cta-btn">
+            {CTA_TEXT}
+          </a>
+          <p class="footer-fine">WhatsApp call · Free · Available Mon–Sat</p>
+        </div>
+
+        <footer>
+          <div class="footer-mark">
+            <img src="/chevron-cream.png" alt="" aria-hidden="true" width="28" height="28" />
+            <span class="footer-brand">Coach System Nepal</span>
+          </div>
+          <p class="footer-copy">© 2025 Yogesh Kaphle · system.yogeshkaphle.com</p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- STICKY MOBILE CTA -->
+    <div id="sticky-cta" aria-hidden="true">
+      <a href={WA_URL} target="_blank" rel="noopener noreferrer" class="cta-btn">
+        {CTA_TEXT}
+      </a>
+    </div>
+
+    <script>
+      (function () {
+        const sticky = document.getElementById('sticky-cta');
+        const heroCta = document.querySelector('#hero .cta-btn') as HTMLElement | null;
+        const footerCard = document.querySelector('.footer-card') as HTMLElement | null;
+
+        if (!sticky || !heroCta || !footerCard) return;
+
+        function update() {
+          if (window.innerWidth >= 761) {
+            (sticky as HTMLElement).style.display = 'none';
+            sticky!.setAttribute('aria-hidden', 'true');
+            return;
+          }
+          const heroRect = heroCta!.getBoundingClientRect();
+          const footerRect = footerCard!.getBoundingClientRect();
+          const heroVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight;
+          const footerVisible = footerRect.top < window.innerHeight && footerRect.bottom > 0;
+          const show = !heroVisible && !footerVisible;
+          (sticky as HTMLElement).style.display = show ? 'block' : 'none';
+          sticky!.setAttribute('aria-hidden', show ? 'false' : 'true');
+        }
+
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update, { passive: true });
+        update();
+      })();
+    </script>
+  </body>
+</html>
